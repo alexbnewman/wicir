@@ -1,7 +1,180 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-base: var(--font-poppins);
+
+    /* === Font sizes === */
+  --font-size-hero: 48px;
+  --font-size-page-title: 36px;
+  --font-size-section-header: 28px;
+  --font-size-subsection: 22px;
+  --font-size-body: 18px;
+  --font-size-supporting: 16px;
+  --font-size-metadata: 14px;
+  --font-size-small-badge: 12px;
+  
+  /* === Line heights === */
+  --line-height-tight: 120%;
+  --line-height-med: 130%;
+  --line-height-loose: 150%;
+
+  /* === Font weights === */
+  --font-weight-medium: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Grayscale palette */
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* Primary */
+  --primary-main: #FF7F4F;
+  --primary-50: #FFE1D3;
+  --primary-100: #FFF3ED;
+  --primary-200: #FFC2A3;
+  --primary-300: #FF996E;
+
+  /* Secondary */
+  --secondary-main: #1C2E4A;
+  --secondary-50: #EEF1F8;
+  --secondary-100: #D9DFEA;
+  --secondary-200: #AEBBD3;
+  --secondary-300: #7184A3;
+
+  /* Error */
+  --secondary-50:  #fef2f2;
+  --secondary-100: #fee2e2;
+  --secondary-200: #fecaca;
+  --secondary-300: #dc2626;
+  --secondary-400: #991b1b;
+
+    /* Info */
+  --info-50: #F0F9FF;
+  --info-100: #E0F2FE;
+  --info-200: #BAE6FD;
+  --info-300: #0EA539;
+  --info-400: #1C2E4A;
+
+  /* Warning */
+  --secondary-50:  #fff7ed;
+  --secondary-100: #ffead5;
+  --secondary-200: #fdd9a8;
+  --secondary-300: #fbae5c;
+  --secondary-400: #e88023;
+
+   /* Success */
+  --success-50: #F0FDF4;
+  --success-100: #DCFCE7;
+  --success-200: #BBF7D0;
+  --success-300: #22C55E;
+  --success-400: #15803D;
+
 }
+
+/* Typography utility classes */
+.text-hero {
+  font-family: var(--font-base);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.text-page-title {
+  font-family: var(--font-base);
+  font-size: var(--font-size-page-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.text-section-header {
+  font-family: var(--font-base);
+  font-size: var(--font-size-section-header);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.text-subsection {
+  font-family: var(--font-base);
+  font-size: var(--font-size-subsection);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.text-body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-loose);
+}
+
+.text-supporting {
+  font-family: var(--font-base);
+  font-size: var(--font-size-supporting);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-loose);
+}
+
+.metadata {
+  font-family: var(--font-base);
+  font-size: var(--font-size-metadata);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+}
+
+.small-badge {
+  font-family: var(--font-base);
+  font-size: var(--font-size-small-badge);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-med);
+}
+
+/* Grid displays*/
+.grid-desktop {
+  max-width: 1440px;
+  margin: 0 80px;
+  padding: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+
+.grid-desktop-small {
+  max-width: 1024px;
+  margin: 0 64px;
+  padding: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 32px;
+}
+
+.grid-tablet {
+  max-width: 768px;
+  margin: 0 48px;
+  padding: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+.grid-tablet2 {
+  max-width: 768px;
+  margin: 0 24px;
+  padding: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+/* TODO: Shadows */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -19,7 +192,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
